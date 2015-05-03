@@ -11,7 +11,9 @@ Using Sublime can speed up text edition by using plugis
 		=> gulpfile.js edition
 	- ReactSublimeSnippets
 		=> react js edition (see https://github.com/joemaddalone/ReactSublimeSnippets )
-
+	- Git
+		=> Version control, may become handy (https://packagecontrol.io/packages/Git)
+		
 Setting up environment (for building process)
 
 
