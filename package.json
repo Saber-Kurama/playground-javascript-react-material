@@ -1,0 +1,24 @@
+{
+  "name": "testReact",
+  "version": "1.0.0",
+  "description": "testing how to create a ReactJS SAP using flux",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "reactify": "^1.1.0",
+    "react": "^0.13.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hmadrigal",
+  "license": "ISC",
+  "keywords": [
+    "test",
+    "react"
+  ]
+}
