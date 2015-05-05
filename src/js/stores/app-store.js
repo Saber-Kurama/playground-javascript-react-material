@@ -15,6 +15,9 @@ var _catalog = [
 var _cartItems = [];
 
 function _removeItem (index) {
+	var item = _cartItems[index];
+	delete item['quantity'];
+	delete item['isInCart'];
 	_cartItems.splice(index,1);
 }
 
@@ -31,6 +34,7 @@ function _decreaseItem (index) {
 }
 
 function _addItem (item) {
+	debugger;
 	if (!item.isInCart){
 		item['quantity'] = 1;
 		item['isInCart'] = true;
