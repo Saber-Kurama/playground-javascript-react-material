@@ -4,8 +4,10 @@
   "description": "testing how to create a ReactJS SAP using flux",
   "main": "gulpfile.js",
   "dependencies": {
-    "reactify": "^1.1.0",
-    "react": "^0.13.2"
+    "flux": "^2.0.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.13.2",
+    "reactify": "^1.1.0"
   },
   "devDependencies": {
     "gulp": "^3.8.11",

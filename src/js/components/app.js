@@ -1,13 +1,15 @@
 /** @jsx React.DOM */
 var React = require('react');
-var AppActions = require('../actions/app-actions.js')
+var Catalog = require('../components/app-catalog.js');
 
 var APP = React.createClass({
-	handleClick : function  () {
-		AppActions.addItem('this is a new item'); 
-	},
-	render:function(){
-		return <h1 onClick={this.handleClick}>MY FLUX APP</h1>
+	render : function(){
+		return (
+			<div>
+				<h1>Lets Shop</h1>
+				<Catalog />
+			</div>
+		)
 	}
 });
 

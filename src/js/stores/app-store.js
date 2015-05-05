@@ -1,15 +1,16 @@
 var AppDispatcher = require('../dispatchers/app-dispatcher');
 var AppConstants = require('../constants/app-constants');
 var EventEmitter = require('events').EventEmitter;
-var merge = require('react/lib/merge');
+//var merge = require('react/lib/merge');
+var assign = require('object-assign');
 
 var CHANGE_EVENT = "event";
 
-var _catalog = {
+var _catalog = [
 	{ id: 1, title : 'Widget #1', cost : 1 },
 	{ id: 2, title : 'Widget #2', cost : 2 },
 	{ id: 3, title : 'Widget #3', cost : 3 }
-};
+];
 
 var _cartItems = [];
 
@@ -23,7 +24,7 @@ function _increaseItem (index) {
 
 function _decreaseItem (index) {
 	if(_cartItems[index].quantity > 1) {
-		_cartItems[index].quantity--
+		_cartItems[index].quantity--;
 	}else{
 		_removeItem(index);
 	}
@@ -43,7 +44,8 @@ function _addItem (item) {
 	}
 }
 
-var AppStore = merge(EventEmitter.prototype,{
+//var AppStore = merge(EventEmitter.prototype,{
+var AppStore = assign({}, EventEmitter.prototype, {
 	emitChange : function  () {
 		this.emit(CHANGE_EVENT);
 	},
@@ -77,7 +79,7 @@ var AppStore = merge(EventEmitter.prototype,{
 				_decreaseItem(payload.action.index);
 			break;
 		}
-		appStore.emitChange();
+		AppStore.emitChange();
 		return true;
 	})
 });
