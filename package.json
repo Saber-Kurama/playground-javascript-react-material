@@ -5,8 +5,10 @@
   "main": "gulpfile.js",
   "dependencies": {
     "flux": "^2.0.0",
+    "material-ui": "^0.7.5",
     "object-assign": "^1.0.0",
     "react": "^0.13.2",
+    "react-tap-event-plugin": "^0.1.6",
     "reactify": "^1.1.0"
   },
   "devDependencies": {
@@ -31,5 +33,13 @@
   },
   "author": "hmadrigal",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmadrigal/playground-javascript-react-material.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hmadrigal/playground-javascript-react-material/issues"
+  },
+  "homepage": "https://github.com/hmadrigal/playground-javascript-react-material"
 }
