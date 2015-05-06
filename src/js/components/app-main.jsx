@@ -2,6 +2,8 @@
 var React = require('react');
 var Catalog = require('./app-catalog.jsx');
 var Cart = require('./app-cart.jsx');
+var mui = require('material-ui');
+var Paper = mui.Paper;
 
 var Main = React.createClass({
 	render : function(){

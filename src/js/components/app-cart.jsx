@@ -28,13 +28,13 @@ var Cart = React.createClass({
 			return (
 				<tr key={i}>
 					<td><RemoveFromCart index={i} /></td>
-					<td>{item.title}</td>
-					<td>{item.quantity}</td>
+					<td><div className="mui-font-style-caption">{item.title}</div></td>
+					<td><div className="mui-font-style-caption">{item.quantity}</div></td>
 					<td>
 						<Increase index={i}/>
 						<Decrease index={i}/>
 					</td>
-					<td>${subtotal}</td>
+					<td><div className="mui-font-style-title">${subtotal}</div></td>
 				</tr>
 			);
 		});
@@ -43,10 +43,10 @@ var Cart = React.createClass({
 			<thead> 
 				<tr>
 					<th></th>
-					<th>Item</th>
-					<th>Qty</th>
+					<th><div className="mui-font-style-subhead-1">Item</div></th>
+					<th><div className="mui-font-style-subhead-1">Qty</div></th>
 					<th></th>
-					<th>Subtotal</th>
+					<th><div className="mui-font-style-subhead-1">Subtotal</div></th>
 				</tr>
 			</thead>
 			<tbody>

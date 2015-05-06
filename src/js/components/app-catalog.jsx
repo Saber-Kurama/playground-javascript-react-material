@@ -14,7 +14,7 @@ var Catalog = React.createClass({
 	},
 	render:function(){
 		var items = this.state.items.map(function  (item) {
-			return <tr><td>{item.title}</td><td>{item.cost}</td><td><AddToCart item={item}/></td></tr>
+			return <tr><td><div className="mui-font-style-caption">{item.title}</div></td><td><div className="mui-font-style-caption">{item.cost}</div></td><td><AddToCart item={item}/></td></tr>
 		})
 		return (
 			<table className="table table-hover">

@@ -3,6 +3,7 @@ var React = require('react');
 var AppActions = require('../actions/app-actions.js');
 var mui = require('material-ui');
 var RaisedButton = mui.RaisedButton;
+var Snackbar = mui.Snackbar;
 
 var AddToCart = React.createClass({
 	handleClick : function  () {
