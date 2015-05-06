@@ -8,6 +8,8 @@
     "material-ui": "^0.7.5",
     "object-assign": "^1.0.0",
     "react": "^0.13.2",
+    "react-async": "^2.1.0",
+    "react-router-component": "^0.24.4",
     "react-tap-event-plugin": "^0.1.6",
     "reactify": "^1.1.0"
   },
