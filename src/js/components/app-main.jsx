@@ -1,9 +1,9 @@
 /** @jsx React.DOM */
 var React = require('react');
-var Catalog = require('../components/app-catalog.js');
-var Cart = require('../components/app-cart.js');
+var Catalog = require('./app-catalog.jsx');
+var Cart = require('./app-cart.jsx');
 
-var APP = React.createClass({
+var Main = React.createClass({
 	render : function(){
 		return (
 			<div>
@@ -16,4 +16,4 @@ var APP = React.createClass({
 	}
 });
 
-module.exports = APP;
+module.exports = Main;

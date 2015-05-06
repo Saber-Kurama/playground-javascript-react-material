@@ -8,7 +8,7 @@ var CHANGE_EVENT = "event";
 
 var _catalog = [];
 
-for(var i=0; i<9;i++){
+for(var i=0; i<3;i++){
 	_catalog.push({
 		'id' : 'Widget' + i,
 		'title' : 'Widget #' + i,
@@ -41,7 +41,6 @@ function _decreaseItem (index) {
 }
 
 function _addItem (item) {
-	debugger;
 	if (!item.isInCart){
 		item['quantity'] = 1;
 		item['isInCart'] = true;
