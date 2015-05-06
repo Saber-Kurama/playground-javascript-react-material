@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 var React = require('react');
-var AppStore = require('../stores/app-store.js');
+var AppStore = require('../../stores/app-store.js');
 var RemoveFromCart = require('./app-removefromcart.jsx');
 var Increase = require('./app-increase.jsx');
 var Decrease = require('./app-decrease.jsx');

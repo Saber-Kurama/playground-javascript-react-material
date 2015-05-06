@@ -8,7 +8,7 @@ var CHANGE_EVENT = "event";
 
 var _catalog = [];
 
-for(var i=1; i<=3;i++){
+for(var i=1; i<=9;i++){
 	_catalog.push({
 		'id' : 'Widget' + i,
 		'title' : 'Widget #' + i,

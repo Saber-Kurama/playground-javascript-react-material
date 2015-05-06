@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react');
-var Catalog = require('./app-catalog.jsx');
-var Cart = require('./app-cart.jsx');
+var Catalog = require('./catalog/app-catalog.jsx');
+var Cart = require('./cart/app-cart.jsx');
 var mui = require('material-ui');
 var Paper = mui.Paper;
 
