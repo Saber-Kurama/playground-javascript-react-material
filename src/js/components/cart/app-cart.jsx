@@ -5,7 +5,7 @@ var RemoveFromCart = require('./app-removefromcart.jsx');
 var Increase = require('./app-increase.jsx');
 var Decrease = require('./app-decrease.jsx');
 var StoreWatchMixin = require('../../mixins/StoreWatchMixin.js');
-
+var Link = require('react-router-component').Link;
 
 function _getCartItems () {
 	return { items:  AppStore.getCart() };
@@ -13,18 +13,6 @@ function _getCartItems () {
 
 var Cart = React.createClass({
 	mixins : [StoreWatchMixin(_getCartItems)],
-	// getInitialState : function  () {
-	// 	return _getCartItems();
-	// },
-	// componentWillMount:function(){
-	// 	AppStore.addChangeListener(this._onChange);
-	// },
-	// componentWillUnmount:function(){
-	// 	AppStore.removeChangeListener(this._onChange);
-	// },
-	// _onChange:function  () {
-	// 	this.setState(_getCartItems());
-	// },
 	render:function(){
 		var total = 0;
 		var items = this.state.items.map(function  (item, i) {
@@ -44,26 +32,29 @@ var Cart = React.createClass({
 			);
 		});
 		return (
-			<table className="table table-hover">
-			<thead> 
-				<tr>
-					<th></th>
-					<th><div className="mui-font-style-subhead-1">Item</div></th>
-					<th><div className="mui-font-style-subhead-1">Qty</div></th>
-					<th></th>
-					<th><div className="mui-font-style-subhead-1">Subtotal</div></th>
-				</tr>
-			</thead>
-			<tbody>
-			{items}
-			</tbody>
-			<tfoot>
-				<tr>
-					<td colSpan="4" className="text-right">Total</td>
-					<td>${total}</td>
-				</tr>
-			</tfoot>
-			</table>
+			<div>
+				<table className="table table-hover">
+				<thead> 
+					<tr>
+						<th></th>
+						<th><div className="mui-font-style-subhead-1">Item</div></th>
+						<th><div className="mui-font-style-subhead-1">Qty</div></th>
+						<th></th>
+						<th><div className="mui-font-style-subhead-1">Subtotal</div></th>
+					</tr>
+				</thead>
+				<tbody>
+				{items}
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colSpan="4" className="text-right">Total</td>
+						<td>${total}</td>
+					</tr>
+				</tfoot>
+				</table>
+				<Link href='/'>Continue Shopping</Link>
+			</div>
 		);
 	}
 });

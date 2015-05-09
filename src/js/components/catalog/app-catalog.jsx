@@ -2,7 +2,7 @@
 var React = require('react');
 var AppStore = require('../../stores/app-store.js');
 var AddToCart = require('./app-addtocart.jsx');
-
+var CatalogItem = require('./app-catalogitem.jsx');
 
 function _getCatalog () {
 	return { items:  AppStore.getCatalog() };
@@ -14,12 +14,12 @@ var Catalog = React.createClass({
 	},
 	render:function(){
 		var items = this.state.items.map(function  (item) {
-			return <tr><td><div className="mui-font-style-caption">{item.title}</div></td><td><div className="mui-font-style-caption">{item.cost}</div></td><td><AddToCart item={item}/></td></tr>
+			return <CatalogItem item={item} />
 		})
 		return (
-			<table className="table table-hover">
+			<div className="row">
 			{items}
-			</table>
+			</div>
 		);
 	}
 });

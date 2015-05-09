@@ -5,8 +5,7 @@ var AppStore = require('../stores/app-store.js');
 var StoreWatchMixin = function (callback) {
 	return {
 		getInitialState : function  () {
-			return callback();
-			//return _getCartItems();
+			return callback(this);
 		},
 		componentWillMount:function(){
 			AppStore.addChangeListener(this._onChange);
@@ -15,7 +14,7 @@ var StoreWatchMixin = function (callback) {
 			AppStore.removeChangeListener(this._onChange);
 		},
 		_onChange:function  () {
-			this.setState(callback());
+			this.setState(callback(this));
 		}
 	};
 };
